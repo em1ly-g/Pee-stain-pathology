@@ -1,0 +1,26 @@
+each image was processed to give 3 images, with corresponding prefixes OA_1, OE_2 etc...
+
+the "unwrapped" are the polar transformed images, no surprise :)
+
+
+-------------------------------------------------------
+
+the "marked" images have 3 circles: 1 red, 2 green (sometimes faint and hard to see)
+the red circle is what the program identified as the radius of the circle
+the green circles are the inner and outer radii used in the unwrapping function
+
+the "masked" images are the images applied with the mask used in the image processing to try pull out the main circle
+
+
+these two other images are for quality control to see how the program performed.
+
+e.g 
+
+OE_3 had a really good mask pretty much perfectly capturing the circle, the red circle pretty perfect and the green circles capture all the data, consequently the unwrapped image is very nice
+
+OE_7 had an okay mask it captured some back ground stuff, but the circles are pretty poor not fully capturing all the data, consequently the unwrapped image is missing some of the crystal ring.
+
+----------------------------------------------
+
+the OA sample images didnt really process well at all (unsurprisingly)
+
