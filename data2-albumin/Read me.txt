@@ -1,0 +1,9 @@
+This file contains:
+
+All images: raw images sent of solution containing albumin (a chicken 
+		protien)
+
+processed: Images which have been edited such that the background is 
+		  black and the detailed structure is shown in white
+
+standardize_main and standardize: matlab files used to process the images. 
