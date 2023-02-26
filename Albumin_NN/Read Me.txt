@@ -1,0 +1,7 @@
+This folder is the 1st attmept at using NN for albumin protein detection.
+
+bin_data = binary data ---> high conc vs low conc
+
+Model stored as .h5 file
+
+Also some test images which the model was not trained on (removed from bin_data)
