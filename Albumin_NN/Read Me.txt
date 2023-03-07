@@ -1,3 +1,4 @@
+----------------initial push------------------
 This folder is the 1st attmept at using NN for albumin protein detection.
 
 bin_data = binary data ---> high conc vs low conc
@@ -5,3 +6,8 @@ bin_data = binary data ---> high conc vs low conc
 Model stored as .h5 file
 
 Also some test images which the model was not trained on (removed from bin_data)
+
+
+------------------ added 07/03/23 ---------------------
+now attatched Visualise_filters.py file which allows to see what filters are and how they activate
+also added a few test images to go along with 
