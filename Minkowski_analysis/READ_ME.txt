@@ -14,3 +14,10 @@ it also learned in less than 5 seconds!!! loss and acc plots dont seem to sugges
 
 
 also plots of minkowski functionals for low and high conc, can easily see difference without NN. 
+
+
+---------------------------push 2 10/03/23-------------------------------------------
+
+repeated analysis with exact same architecture for the calcium oxalate, NN overfit really badly
+
+NEED MORE DATA!!!!!!
