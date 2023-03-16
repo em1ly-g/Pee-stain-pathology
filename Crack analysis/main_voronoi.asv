@@ -1,0 +1,34 @@
+function [] = main_voronoi()
+    addpath('skeletonization\')
+    addpath('voronoi_functions\')
+
+    path = '..\\data2-albumin/All images/';
+    image_files = dir(path);
+    file_names = image_files;
+    % the first two lines in the struct are '.' and '..'
+    file_names(1) = [];
+    file_names(1) = [];
+    file = fopen('voronoi_params.txt', 'w');
+    fprintf(file, 'node, verticies, defect, ratio, # of polygons, # of sides');
+    for index = 1:length(file_names)
+        image_name = file_names(40).name;
+        image_name = append(path, image_name);
+
+        image = imread(image_name);
+
+        skeleton = get_skeleton(image);
+
+        [num_polygons, number_of_sides, angular_defect, ...
+                iscoperimetric_ratio, nodes, vertices] = get_voromoi(skeleton);
+
+
+        fprintf(file, '%d, ' nodes);
+    end
+
+        % write into txt file
+        
+        
+    
+    fclose(file);
+
+end
