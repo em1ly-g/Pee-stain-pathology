@@ -9,7 +9,7 @@ function [] = main_voronoi()
     file_names(1) = [];
     file_names(1) = [];
     file = fopen('voronoi_params.txt', 'w');
-    fprintf(file, 'node, verticies, defect, ratio, # of polygons, # of sides\n');
+    fprintf(file, 'file, node, verticies, defect, ratio, # of polygons, # of sides\n');
     for index = 1:length(file_names)
         image_name = file_names(index).name;
         image_name = append(path, image_name);
@@ -20,8 +20,9 @@ function [] = main_voronoi()
 
         [num_polygons, number_of_sides, angular_defect, ...
                 iscoperimetric_ratio, nodes, verticies] = get_voronoi(skeleton);
-
-        fprintf(file, '%d, ', nodes);
+    
+        fprintf(file, file_names(index).name);
+        fprintf(file, ', %d, ', nodes);
         fprintf(file, '%d, ', verticies);
         fprintf(file, '%d, ', angular_defect);
         fprintf(file, '%d, ', iscoperimetric_ratio);
