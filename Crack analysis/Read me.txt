@@ -1,0 +1,12 @@
+This folder is a little bit of a mess but here we go:
+
+main_voronoi takes all the images in data2-albumin/All images/ , finds the branch
+points from the skeleton of the original image, creates a voronoi diagram and
+extracts:
+
+the number of nodes, number of verticies, angular defect, ratio, number of 
+polygons, average number of sides per polygon.
+
+The data is then written into voronoi_params.
+
+If any of the processes fail, the values are overwritten with -1.
