@@ -9,4 +9,4 @@ function skeleton=get_skeleton(image)
     skeleton = Skeleton3D(image);
 
     %figure
-    imshow(skeleton)
+    %imshow(skeleton)

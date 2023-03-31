@@ -22,3 +22,8 @@ function ratio = get_isoperimetric_ratio(V, C)
     isoperimetric_ratio = 4*pi*areas ./ perimeters_sqr;
 
     ratio = mean(isoperimetric_ratio);
+
+    if isnan(ratio)
+        ratio=-1;
+    end
+end
