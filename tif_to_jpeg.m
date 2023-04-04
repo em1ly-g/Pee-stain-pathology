@@ -1,6 +1,6 @@
 function [] = tif_to_jpeg()
 
-paths = ['OF/'];
+paths = ['data 1/unsaturated/'];
 
 
     path = paths;
@@ -10,17 +10,17 @@ paths = ['OF/'];
     file_names(1) = [];
 
     for index = 1:length(file_names)
-        index
-        file = file_names(index).name
-        
-        file_location = append(path, file);
-
-        img = imread(file_location);
-
-        file_no_ext = extractBefore(file, ".")
-        file = append(file_no_ext, '.jpg')
-
-        imwrite(img, append('OF_jpeg/', file));
+        file = file_names(index).name;
+        if file ~= "jpgs"
+            file_location = append(path, file);
+    
+            img = imread(file_location);
+    
+            file_no_ext = extractBefore(file, ".");
+            file = append(file_no_ext, '.jpg');
+    
+            imwrite(img, append('data 1/unsaturated/jpgs/', file));
+        end
     end
 end
 
