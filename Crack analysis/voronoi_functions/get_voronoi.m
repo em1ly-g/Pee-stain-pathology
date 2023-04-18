@@ -5,10 +5,10 @@ function [num_polygons, number_of_sides, angular_defect, ...
         verticies = get_branch_points(image);
         [x, y] = find(verticies);
         
-        %[vx, vy] = voronoi(x, y);
-        %figure
-        %plot(vx, vy, 'b')
-        %axis equal;
+        [vx, vy] = voronoi(x, y);
+        figure
+        plot(vx, vy, 'b')
+        axis equal;
     
         % Compute the Voronoi diagram
         points = [x,y];

@@ -8,9 +8,14 @@ function [] = main_voronoi()
     % the first two lines in the struct are '.' and '..'
     file_names(1) = [];
     file_names(1) = [];
-    file = fopen('voronoi_params.txt', 'w');
+    file = fopen('voronoi_params2.txt', 'w');
     fprintf(file, 'file, node, verticies, defect, ratio, # of polygons, # of sides\n');
-    for index = 1:length(file_names)
+    %
+    % These files have been edited to show all the images in separate
+    % figures. I dont reccomend that you run this iterating over all the
+    % images. I used image 8 for the first image in B or 36 for the first
+    % image in F
+    for index = 8 %1:length(file_names)
         image_name = file_names(index).name;
         image_name = append(path, image_name);
 
@@ -23,10 +28,10 @@ function [] = main_voronoi()
     
         fprintf(file, file_names(index).name);
         fprintf(file, ', %d, ', nodes);
-        fprintf(file, '%d, ', verticies);
+        %fprintf(file, '%d, ', verticies);
         fprintf(file, '%d, ', angular_defect);
         fprintf(file, '%d, ', iscoperimetric_ratio);
-        fprintf(file, '%d, ', num_polygons);
+        %fprintf(file, '%d, ', num_polygons);
         fprintf(file, '%d \n', number_of_sides);
 
         %disp('Next image');

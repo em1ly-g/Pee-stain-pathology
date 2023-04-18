@@ -1,0 +1,2 @@
+file, node, verticies, defect, ratio, # of polygons, # of sides
+OB_1_C001H001S0001000001.jpg, 570, 1.649960e-01, 2.888067e-01, 5.724590e+00 
