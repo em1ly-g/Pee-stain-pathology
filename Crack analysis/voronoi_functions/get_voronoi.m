@@ -1,14 +1,16 @@
 function [num_polygons, number_of_sides, angular_defect, ...
-                iscoperimetric_ratio, num_nodes, num_vertices]=get_voronoi(image)
+                iscoperimetric_ratio, num_nodes, num_vertices]=get_voronoi(image, show)
     try
     
         verticies = get_branch_points(image);
         [x, y] = find(verticies);
         
         [vx, vy] = voronoi(x, y);
-        figure
-        plot(vx, vy, 'b')
-        axis equal;
+        if show
+            figure
+            plot(vx, vy, 'b')
+            axis equal;
+        end
     
         % Compute the Voronoi diagram
         points = [x,y];
