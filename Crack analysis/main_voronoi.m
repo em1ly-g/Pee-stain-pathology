@@ -2,13 +2,13 @@ function [] = main_voronoi()
     addpath('skeletonization\')
     addpath('voronoi_functions\')
 
-    path = '..\\data2-albumin/All images/';
+    path = '..\\data1/unsaturated/';
     image_files = dir(path);
     file_names = image_files;
     % the first two lines in the struct are '.' and '..'
     file_names(1) = [];
     file_names(1) = [];
-    file = fopen('voronoi_params2.txt', 'w');
+    file = fopen('CaOx_params_unsat.txt', 'w');
     fprintf(file, 'file, node, defect, ratio, # of sides\n');
     %
     % These files have been edited to show all the images in separate
@@ -16,9 +16,9 @@ function [] = main_voronoi()
     % images. I used image 8 for the first image in B or 36 for the first
     % image in F
 
-    show = false;
+    show = true;
 
-    for index = 1:length(file_names) %replace this with a number to not iterate
+    for index = 26 %1:length(file_names) %replace this with a number to not iterate
 
         image_name = file_names(index).name;
         image_name = append(path, image_name);
