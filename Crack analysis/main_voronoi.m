@@ -2,7 +2,7 @@ function [] = main_voronoi()
     addpath('skeletonization\')
     addpath('voronoi_functions\')
 
-    path = '..\\data1/unsaturated/';
+    path = '..\\data2-albumin/All images/';
     image_files = dir(path);
     file_names = image_files;
     % the first two lines in the struct are '.' and '..'
@@ -18,7 +18,7 @@ function [] = main_voronoi()
 
     show = true;
 
-    for index = 26 %1:length(file_names) %replace this with a number to not iterate
+    for index = 1 %1:length(file_names) %replace this with a number to not iterate
 
         image_name = file_names(index).name;
         image_name = append(path, image_name);
